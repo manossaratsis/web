@@ -1,0 +1,481 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Manos Saratsis | The optimization potential of floor-plan typologies</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<!-- OpenGraph markup for FB + LI -->
+
+<meta property="og:type" content="website">
+
+<meta property="og:site_name" content="Manos Saratsis Personal Website">
+
+<meta property="og:url" content="https://manossaratsis.com/research/the-optimization-potential-of-floor-plan-typologies/index">
+
+<meta property="og:title" content="The optimization potential of floor-plan typologies">
+<meta property="og:description" content="Quantifying the significance of interior subdivisions on building performance simulation results.">
+
+<meta property="og:image" content="https://manossaratsis.com/research/the-optimization-potential-of-floor-plan-typologies/cover.jpg">
+
+<!-- Twitter card markup -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The optimization potential of floor-plan typologies">
+<meta name="twitter:description" content="Quantifying the significance of interior subdivisions on building performance simulation results.">
+
+<meta name="twitter:image" content="https://manossaratsis.com/research/the-optimization-potential-of-floor-plan-typologies/cover.jpg">
+
+<meta name="twitter:site" content="@sarstis">
+<link rel="shortcut icon" href="../../favicon.png">
+<link rel="stylesheet" href="../../css/stylesheet.css">
+
+  </head>
+  <body>
+    <div class="nav-bar">
+  <img class="nav-button" src="../../img/menu.svg" onclick="openNav()">
+  <ul class="nav-menu">
+    <li><a href="../../" class="logo">MS</a></li>
+    <li><a href="../../">Home</a></li>
+    <li><a href="..">Research</a></li>
+    <li><a href="../../bio">Bio</a></li>
+    <li><a href="../../contact">Contact</a></li>
+  </ul>
+</div>
+
+    <main>
+      <ul class="sidebar" id="markdown-toc">
+  <li><a href="#abstract" id="markdown-toc-abstract">Abstract</a></li>
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#methodology" id="markdown-toc-methodology">Methodology</a></li>
+  <li><a href="#phase-1-sorting" id="markdown-toc-phase-1-sorting">Phase 1: Sorting</a></li>
+  <li><a href="#phase-2-modeling" id="markdown-toc-phase-2-modeling">Phase 2: Modeling</a></li>
+  <li><a href="#results" id="markdown-toc-results">Results</a></li>
+  <li><a href="#discussion" id="markdown-toc-discussion">Discussion</a></li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+  <li><a href="#acknowledgements" id="markdown-toc-acknowledgements">Acknowledgements</a></li>
+  <li><a href="#references" id="markdown-toc-references">References</a></li>
+</ul>
+
+<h1 id="the-optimization-potential-of-floor-plan-typologies-in-early-design-energy-modeling">The optimization potential of floor-plan typologies in early design energy modeling</h1>
+<hr>
+
+<p><a href="http://www.ibpsa.org/proceedings/BS2015/p2455.pdf">Download full manuscript</a></p>
+
+<p><strong>Dogan, T., Saratsis, E., &amp; Reinhart, C.F. (2015)</strong></p>
+
+<p><em>Building Simulation 2015: International Conference <br>
+of the Building Performance Simulation Association <br>
+Hyderabad, India, December 2015 <br>
+pp. 1853-1860</em></p>
+
+<h2 id="abstract">Abstract</h2>
+
+<p>Based on a consensus in the field that energy modeling should be applied as early as possible in the design process to maximize its impact on important design decisions, multi-zone thermal simulations are now used with increasing frequency in the earliest design stages. In the massing model phase, when the interior subdivision of a building is yet unknown, zoning standards such as ASHRAE 90.1 Appendix G assist modelers by prescribing a subdivision scheme with core and a consistently deep perimeter regions along the facade. This scheme, however, hardly ever resembles actual interior space subdivisions and thus raises the question of accuracy and usefulness of such simulations. This manuscript hence analyzes the significance of interior subdivisions on simulation results by thoroughly comparing the energy use intensity (EUI) levels for a representative set of floor-plans against the ASHRAE-prescribed zoning scheme. A sample set of 1200 simulations reveal a RMSE of 15% for total EUI but also reveal a RMSE of 175% and 105% for predicted heating and cooling loads. This suggests that the ASHRAE zoning scheme has only limited applicability for early design energy optimization.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>For decades modelers have implemented multi-zone thermal models to simulate the energy use of buildings and inform the design and construction process. It is widely acknowledged that the earlier such simulations are used within a project, the greater their impact can be on important design decisions <a href="#references">[de Wilde et al., 2002]</a>. The recent integration of simulation tools into design software, as well as the implementation of automated thermal zoning algorithms <a href="#references">[Smith et al., 2011]</a> <a href="#references">[Dogan et al., 2015]</a> that can instantly build up multi-zone energy models with envelope and core area divisions according to ASHRAE 90.1 Appendix G <a href="#references">[ANSI/ASHRAE/IESNA, 2013]</a> have led to fluid and interactive design workflows <a href="#references">[Dogan, 2013]</a> <a href="#references">[Roudsari et al. 2013]</a> <a href="#references">[Lagios et al. 2010]</a>. As a consequence, designers can now use energy modeling workflows with minimum effort.</p>
+
+<p>This situation provokes the question of how useful these new workflows might actually be for designers. This might seem surprising to the reader given that the American Institute of Architects (AIA) specifically endorses the use of energy simulations by architects <a href="#references">[AIA, 2012]</a> while the US Green Building Council’s LEED green building rating system provides credit for energy-simulation informed massing design <a href="#references">[USGBC, 2014]</a>. What could be the remaining limitations of current building energy simulation approaches for the design process? If specifics of interior floor plan layout are unknown, ASHRAE 90.1 recommends dividing floor-plates into a core and a consistently deep perimeter region along the facade. This subdivision scheme consequently shifts the attention towards the envelope and its properties in comparative studies. While this might be a good first approach to test the climate-responsiveness of a massing model, an important design optimization potential, the floor plan layout itself, is overlooked.</p>
+
+<blockquote>
+  <p>An important design optimization potential, the floor plan layout itself, is overlooked.</p>
+</blockquote>
+
+<p>In order to further understand the potential of floor plan layouts as energy efficiency measures, this manuscript explores the significance of interior subdivisions for simulation results. We compare a representative set of floor-plan typologies frequently found in architectural design literature with ASHRAE-prescribed thermal zoning models of the same floor-plates. We also show how iterating through several subdivision schemes offers a great potential to lower the intrinsic energy consumption of a design proposal.</p>
+
+<h2 id="methodology">Methodology</h2>
+
+<p>The methodology is organized into two distinct phases: <strong>sorting</strong> and <strong>modeling</strong>. In <a href="#phase-1-sorting">Phase 1</a> we present a process of typological sorting for floor plans based on their exterior shape and interior organization. This process leads to the creation of a comprehensive floor plan typology matrix with samples from contemporary architectural design literature. In <a href="#phase-2-modeling">Phase 2</a> these samples are translated into energy models based on two zoning paradigms:</p>
+
+<ul>
+  <li>
+<strong>Paradigm A:</strong> Zoning that strictly follows the form of the architectural plans</li>
+  <li>
+<strong>Paradigm B:</strong> The ASHRAE 90.1 Appendix G - prescribed core and perimeter subdivision scheme</li>
+</ul>
+
+<p>We then carefully compare the simulation results of both zoning paradigms.</p>
+
+<h2 id="phase-1-sorting">Phase 1: Sorting</h2>
+
+<p>The initial challenge of our study is to develop a representative set of building samples that reflect the typological richness of floor plan designs found in contemporary architectural design. This is a non-trivial task, since the choice of samples to be analyzed is, to an extent, ambiguous and is expected to have a significant impact on the simulation results. In order to respond to this challenge, we introduced a two-level process of typological sorting process for building floor plans:</p>
+
+<ul>
+  <li>
+<strong>Level 1:</strong> Exterior shape</li>
+  <li>
+<strong>Level 2:</strong> Interior organization</li>
+</ul>
+
+<p>With our categorization scheme we combine and consolidate different typological sorting methodologies found in contemporary architectural design theory literature <a href="#references">[Neufert, 2012]</a> <a href="#references">[Jocher, 2010]</a> <a href="references">[Schneider, 2011]</a> <a href="#references">[Ebner, 2010]</a>. We also rely on the previously mentioned sources for the selection of the built examples.</p>
+
+<h3 id="level-1-exterior-shape">Level 1: Exterior shape</h3>
+
+<p>The first level of sorting is the exterior shape of a building design. The general shape and proportions of a building, reflecting functional characteristics, contextual conditions and environmental considerations can vary significantly. The reoccurrence of certain patterns, however, allows us to sort designs into discrete typologies. We identified five popular exterior shape typologies that are described in detail in Figure 1:</p>
+
+<p><img src="fig1.jpg" alt="figure-1" class="figure">
+<em class="caption">Figure 1: Exterior shape typologies</em></p>
+
+<ul>
+  <li>
+<strong>Point:</strong> Compact shape for both housing and office use often organized with a core in the center or on the side. This shape typology can be appointed in several scales, ranging from single-family houses to office towers.</li>
+  <li>
+<strong>Block:</strong> Economic and space-efficient layout unifying different spatial qualities: protected, quiet inner courtyards and outward-oriented spaces. This duality allows for multiple spatial distribution options based on different programmatic requirements.</li>
+  <li>
+<strong>Line:</strong> Shape that is made up of a series of rooms organized along a longitudinal corridor or multiple corridors. Well daylit for a single loaded corridor but less economical. Double or triple loaded corridors less likely to be naturally lit.</li>
+  <li>
+<strong>Poly-line:</strong> Similar to the line typology with a mostly linear organization along a longitudinal corridor with varying angles and segment lengths.</li>
+  <li>
+<strong>Freeform:</strong> Shape reacting to contextual conditions or a freestanding solitaire. Facilitates design of non-conventional circulation space. Completion of the interior requires specific non-standard solutions.</li>
+</ul>
+
+<h3 id="level-2-interior-organization">Level 2: Interior organization</h3>
+
+<p>The previously described shape typologies only describe the exterior appearance of a building and hence only indirectly speak to the floor-plan layout of a building. The interior organization is mostly driven by the way one enters a building and accesses the individual rooms within it. We identified five popular interior organization typologies that are described in detail in Figure 2:</p>
+
+<p><img src="fig2.jpg" alt="figure-2" class="figure">
+<em class="caption">Figure 2: Interior organization typologies</em></p>
+
+<ul>
+  <li>
+<strong>Vertical Point:</strong> Circulation core placed in the center or periphery of the building. The core can house only circulation space or can be designed more generously to incorporate common/shared spaces (e.g. living room/common space as circulation center).</li>
+  <li>
+<strong>Corridor Center:</strong> Linear organization of spaces and services along a central circulation axis, that can often be long and narrow. Daylighting can be a challenge for circulation spaces, due to their limited exposure to the facade.</li>
+  <li>
+<strong>Corridor Edge:</strong> Linear organization of spaces and services along a peripheral circulation axis that can either be on the interior or the exterior of a building.</li>
+  <li>
+<strong>Compartments:</strong> Complex 3-dimensional arrangements that might not repeat on every floor. This organization typology can’t be represented by lines, but by polygonal shapes generated by the placement of spaces. It is often combined with complex interior voids that span over multiple stories, such as atria or gardens.</li>
+  <li>
+<strong>Open Plan:</strong> Organization typology without space dividers. Separation is subtle and the circulation areas are not designated, allowing for flexible programming and giving the impression of a generous space. Placed elements often encapsulate service spaces such as kitchens and restrooms.</li>
+</ul>
+
+<h3 id="typological-matrix">Typological matrix</h3>
+
+<p>Both exterior shape and interior organization describe high-level patterns that frequently reoccur in architectural designs regardless of the building function. Additionally, each exterior shape typology can in theory be freely combined with any interior organization typology and create an overwhelming amount of variants. In order to keep the scope of this analysis manageable we selected one built example for each possible combination of our typologies. We present the resulting samples in Figure 3.</p>
+
+<p><img src="fig3.jpg" alt="figure-3" class="figure">
+<em class="caption">Figure 3: Typological matrix of selected floor plans</em></p>
+
+<h3 id="function--scale">Function &amp; Scale</h3>
+
+<p>In our search for built examples we limit the selection to residential and office buildings. Since these are the most common functions appointed in an urban setting, we believe that this is sufficient to showcase the potential of the presented approach. Commercial and special use-cases such as schools, hospitals, and other institutional buildings are not analyzed but could be included in future work following a similar methodology. The function often also greatly influences the scale of a building. A point typology, for example, can range from a single-family home to a large office tower. We carefully select examples to reflect this variety ranging form a 90m<span class="sup">2</span> single family home to a 3,800m<span class="sup">2</span> office complex.</p>
+
+<h2 id="phase-2-modeling">Phase 2: Modeling</h2>
+
+<p>This phase presents how the thermal models are built, configured and compared. Firstly, the thermal zoning scheme for each subdivision paradigm is explained. This is followed by a description of the workflow to convert the zones into 3D multi-zone thermal model geometry. After the geometric setup, this phase also describes how the zone geometry is combined with zone specific properties such as materiality, loads and conditioning configurations. Lastly, the methodology to compare and analyze the simulation results is detailed.</p>
+
+<h3 id="zone-geometry">Zone geometry</h3>
+
+<p>The first zoning paradigm strictly follows the subdivisions prescribed by the architectural plans. The plan view of the zone subdivisions look identical to the plans given in Figure 3. It is important to mention however, that the 3D thermal model conversion workflow presented requires each zone to be represented by a closed-polygon outline.</p>
+
+<p>The second zoning paradigm follows the ASHRAE 90.1 Appendix G recommendations. The brief guideline states that a floor should be divided into a ‘core’ and a ‘perimeter’ region. The perimeter is defined as the space within a 5m distance from the facade. Further, perimeter spaces with more than one orientation should be subdivided proportionally. The leftover region in the center of the floor forms the ‘core’ <a href="#references">[ANSI/ASHRAE/IESNA, 2013]</a>. In order to produce the core and perimeter geometry for all floor plans we utilized an automatic zoning algorithm <a href="#references">[Dogan et al., 2015]</a>. The algorithm uses straightskeleton subdivision and polygon offsetting to produce the ASHRAE 90.1 Appendix G compliant geometry. It yields closed polygons for core and perimeter of a given floor plan outline. The subdivision of the selected floor plans is shown in Figure 4.</p>
+
+<p><img src="fig4.jpg" alt="figure-4" class="figure">
+<em class="caption">Figure 4: Typological matrix with ASHRAE-prescribed zoning</em></p>
+
+<p>To construct the 3D thermal zone geometry we process the polygons that describe each zone and extrude them by a floor height 3m. The extrusion of the spaces yields the zone geometry for one floor. In order to emulate a roof, ground and middle floor, the zones are then stacked three times. A critical reader might object and note that not every building included in the floor plan matrix in Figure 3 is a three-story building. In this study however, the main focus is on analyzing the effect of different interior subdivision schemata on energy consumption. Hence, we did not intend to replicate the exact energy consumption and model representation of the selected buildings.</p>
+
+<p>The window geometry is also automatically generated. We use the geometric inputs as follows: The floor-plan outline is shattered into small segments at each intersection with a zone wall. Then each segment is scaled and extruded to match a 50% window-wall ratio. We then position each window above a 1m high balustrade resulting in a window band at each floor that uniformly wraps around the building.</p>
+
+<h3 id="zone-configuration">Zone configuration</h3>
+
+<p>The zone configuration includes all non-geometric information on a thermal space such as constructions, space loads, occupancy and the configuration of the conditioning systems.</p>
+
+<p>The construction standard is expected to influence the thermal behavior of each zone significantly. Hence, we test a well insulated and a poorly insulated scenario and the corresponding infiltration rates. We distinguish between construction types for the façade, roof, interior partition, exterior ground and interior slab and apply the constructions uniformly across all zones in the building.</p>
+
+<p>Despite the zone geometry and its materiality, the use-case of each zone must be specified in order to define internal gains, occupancy and control profiles as well as equipment loads. For simplicity, the study is limited to circulation, residential and office space types. Each space type definition loosely followed the Swiss architectural norm SIA Merkblatt 2024 <a href="#references">[SIA, 2006]</a> that defines the most common spaces and their internal gains, equipment loads, set-point temperatures and occupancy profiles. Each space is conditioned with an ideal-unlimited heating and cooling system with a coefficient of performance of 1, in order to obtain ‘pure’ loads as they occur in space. It is assumed that the spaces are fully conditioned all-year round. The only exception is the circulation space, which is tested in a conditioned and unconditioned configuration.</p>
+
+<p>In order to consistently describe the thermal behavior for each model we limit this analysis to the EUI and its components: Heating, cooling, lighting and equipment loads. The loads are given in KWh and are normalized by floor area.</p>
+
+<h3 id="merging-the-data-and-running-the-simulations">Merging the data and running the simulations</h3>
+
+<p>The final task before the simulations are initialized is to combine the previously described parameters with the zone geometry. The geometric and non-geometric input data is hence organized in matching data-tree structures and then streamed to the energy modeling interface called Archsim <a href="#references">[Dogan, 2013]</a>. Archsim is a building energy modeling plugin for Rhino/Grasshopper <a href="#references">[McNeel, 2012]</a> that utilizes EnergyPlus <a href="#references">[DOE, 2012]</a> or TRNSYS <a href="#references">[Klein, 1979]</a>. The use of Grasshopper and Archsim allow us to completely automate the Energy Plus input file production and batch execution of the simulations. For the five by five matrix with two subdivision schemes, two different use-cases, two different conditioning modes of circulation space and two different construction standards the automated procedure generates 400 energy models. Since each subdivision and space configuration scheme is expected to behave differently in different climates the process is repeated three times with a cooling-dominated (Phoenix weather), heating-dominated (Anchorage weather) and a mixed climate (Boston weather) resulting in a total of 1200 Energy Plus simulations.  For each of the simulated scenario we then compare the behavior of the two subdivision paradigms. An overview of the workflow and its information flow is given in Figure 5.</p>
+
+<p><img src="fig5.jpg" alt="figure-5" class="figure">
+<em class="caption">Figure 5: Workflow diagram</em></p>
+
+<h2 id="results">Results</h2>
+
+<p>The previously described simulations yield 1200 energy loads data sets consisting of 600 pairs that describe one building in ASHRAE 90.1 subdivision and the buildings original floor plan. In a post-processing step we compute the percentage error E=((x<span class="sub">AHSHRAE</span> - x<span class="sub">REAL</span>) / x<span class="sub">REAL</span>) of the total EUI and its fours components: Lighting, electric, heating and cooling loads. We plot the computed errors in a distribution chart with 10% bins ranging from positive to negative 100%. The error distribution for the total EUI is given in Figure 6.</p>
+
+<p><img src="fig6.jpg" alt="figure-6" class="figure">
+<em class="caption">Figure 6: Distribution chart of total EUI error</em></p>
+
+<p>The distribution chart shows that 75% of the simulated EUI predicted by the ASHRAE zoned models lies within a  +-15% margin. The distribution of the error of the EUI components is given in the Figures 7-10. Here the spread in the distribution chart is significantly wider. For predicted electric lighting only 33% are within the bounds of +-15%. For electric equipment, heating and cooling only 50%, 67% and 58% respectively lie within the margin.</p>
+
+<p><img src="fig7.jpg" alt="figure-7" class="figure">
+<em class="caption">Figure 7: Distribution chart of cooling load error</em></p>
+
+<p><img src="fig8.jpg" alt="figure-8" class="figure">
+<em class="caption">Figure 8: Distribution chart of heating load error</em></p>
+
+<p><img src="fig9.jpg" alt="figure-9" class="figure">
+<em class="caption">Figure 9: Distribution chart of electric lighting error</em></p>
+
+<p><img src="fig10.jpg" alt="figure-10" class="figure">
+<em class="caption">Figure 10: Distribution chart of equipment load error</em></p>
+
+<p>We also compute the RMSE of the total EUI and its components over all scenarios for each floor plan in order to see a relationship between error and the actual geometry. The result is given in Figure 11. It is interesting to note that floor plans such as B3, D4 and D5 report significantly smaller errors than others. This is mostly due to the geometric similarity of the architectural plan and the ASHRAE subdivision in these specific cases where both variants have similar size core regions. One should also note that similarities in topology do not guarantee consistent results between the two subdivision paradigms. A good example that showcases this effect is case E3. Here the core and perimeter regions are almost identical topologically but differ significantly in proportion and uncle cause heating and cooling predictions that differ 124% and 265% on average throughout all scenarios. Floor plans with circulation at the edges (Typologies C1-C5) instead of a central corridor have a tendency to produce significant deviation between the two zoning paradigms. Here the circulation spaces serve as a thermal buffer zone and hence lower the predicted energy use. This effect is especially pronounced when the circulation spaces are unconditioned.</p>
+
+<p><img src="fig11.jpg" alt="figure-11" class="figure">
+<em class="caption">Figure 11: RMSE plotted on the floor plan matrix</em></p>
+
+<p>In order to summarize all computed errors we provide an overview in Table 3 that plots overall RMSE for total EUI, lighting, electric, cooling and heating loads. We also show the mean bias error MBE and the minimum and maximum errors that were encountered in the data set. The overall RMSE and MBE are at 15% and 2%. However, the data also shows that the overall error is significantly lowered by balancing errors in the EUI components. The overall RMSE and MBE are significantly higher for heating cooling and lighting. The minimum and maximum show that there are extreme outliers in the data set.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">Component</th>
+      <th style="text-align: left">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>RMSE</strong></td>
+      <td style="text-align: left"><strong>Total</strong></td>
+      <td style="text-align: left"><strong>+15%</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Equipment</td>
+      <td style="text-align: left">+24%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Lighting</td>
+      <td style="text-align: left">+37%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Heating</td>
+      <td style="text-align: left">+175%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Cooling</td>
+      <td style="text-align: left">+105%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>MBE</strong></td>
+      <td style="text-align: left"><strong>Total</strong></td>
+      <td style="text-align: left"><strong>+2%</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Equipment</td>
+      <td style="text-align: left">+3%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Lighting</td>
+      <td style="text-align: left">-15%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Heating</td>
+      <td style="text-align: left">+32%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Cooling</td>
+      <td style="text-align: left">+22%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>MIN</strong></td>
+      <td style="text-align: left"><strong>Total</strong></td>
+      <td style="text-align: left"><strong>-29%</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Equipment</td>
+      <td style="text-align: left">-43%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Lighting</td>
+      <td style="text-align: left">-84%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Heating</td>
+      <td style="text-align: left">-100%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Cooling</td>
+      <td style="text-align: left">-50%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>MAX</strong></td>
+      <td style="text-align: left"><strong>Total</strong></td>
+      <td style="text-align: left"><strong>+58%</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Equipment</td>
+      <td style="text-align: left">+61%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Lighting</td>
+      <td style="text-align: left">+118%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Heating</td>
+      <td style="text-align: left">+2,700%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Cooling</td>
+      <td style="text-align: left">+1,250%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em class="caption">Table 3: Summary of results</em></p>
+
+<h2 id="discussion">Discussion</h2>
+
+<p>The foregoing section demonstrated that the zoning paradigm recommended in ASHRAE 90.1 Appendix G for early design evaluations can lead to significant inconsistencies in the calculation of energy loads when compared to zoning that follows a real floor plan layout. With an RMSE of around 175% for heating and 105% for cooling this study suggests that the ASHRAE zoning paradigm only has limited applicability for early design evaluations. It shows that the architectural essence of a floor plan layout is only sufficiently captured for very specific building types and proportions. The assumptions proposed by this paradigm reduce the complexity of architectural design, but also reduce design’s potential to have a positive impact on energy efficiency. A typical example is the assumption that a building is always subdivided to core and perimeter regions, generated by a standard set of geometric manipulations. While using ASHRAE’s zoning paradigm might be a good first approach to test the climate-responsiveness of a massing model or a building envelope, the efficiency gain potential of the floor plan layout itself is overlooked. How could architects tap into this potential?</p>
+
+<p>Unlike other architectural optimization workflows such as structural design or daylight optimization the relationship between energy and form has had the tendency to only provide a fuzzy and indirect sensitivity to morphologic changes of a design. The programmatic proportions and its spatial distribution within a design seem to have a significant influence on energy demand. We hence introduce a proof-of-concept floor plan optimization workflow. We test one floor plan shape with nine different subdivision variants that all maintain the same area for circulation and main use throughout the test.</p>
+
+<p>Similar to the previous simulation setup the floor plan is tested for multiple climates, construction standards and use. A 20m by 60m floor plate is simulated with nine different subdivisions. The plans are shown in Figure 12. The zoning consists of a main use area and circulation that is kept constant at 150m<span class="sup">2</span> per floor in all variants. The circulation area is visualized in light grey. A window-wall ratio of 50% is assumed for both the north and the south facade. The nine zoning variants are tested in the same 24 scenarios mentioned in the methodology section.</p>
+
+<p><img src="fig12.jpg" alt="figure-12" class="figure">
+<em class="caption">Figure 12: Schematic design floor plan design variants with identical circulation area</em></p>
+
+<p>The difference in the results is significant. Figure 13 shows a load breakdown for one scenario. In this scenario the choice of the floor plan layout by itself can make or break the LEED credits achievable for building energy load reduction.</p>
+
+<p><img src="fig13.jpg" alt="figure-13" class="figure">
+<em class="caption">Figure 13: Load breakdown for all variants in one simulation scenario</em></p>
+
+<p>In order to evaluate the variance in energy use intensity for all scenarios Figure 14 visualizes the delta of the minimum and maximum energy load among all nine floor plan variants. The delta is then normalized by the minimum-achievable-load.</p>
+
+<p><img src="fig14.jpg" alt="figure-14" class="figure">
+<em class="caption">Figure 14: Delta of the minimum and maximum energy load divided by the minimum achievable load</em></p>
+
+<p>As illustrated in Figure 14, the delta of the best and the worst performer within one scenario as high as 180% of the minimum achievable energy demand. One can thus safely infer that the floor-plan layout can have a significant influence on a building’s energy demand. This result sheds new light on the relationship between form and energy in general: whereas the traditional assumption has been that massing orientation and façade design have the greatest impact towards energy efficiency, this study extends the focus on another important parameter of the architectural design domain – the floor plan and its organization typology.</p>
+
+<blockquote>
+  <p>This result sheds new light on the relationship between form and energy in general.</p>
+</blockquote>
+
+<p>The previously presented results show that area proportions and location of the core area have to match only approximately in order to get closely matching results (Typologies A4, B3). Hence, this knowledge should be part of the thermal zoning considerations as early as possible. This would have different impacts based on the scale of its implementation:</p>
+
+<ul>
+  <li>At the building scale, the embedding of these considerations could guide building form generation and the arrangement of spaces according to various organization typologies.</li>
+  <li>At the urban scale, this level of detail might seem untimely. However, by implementing an architecturally conscious thermal zoning process early on, the developer of a master plan can tap into an additional energy efficiency potential that might be very valuable when defining performance and carbon footprint targets.</li>
+</ul>
+
+<p>Ultimately, we believe that the architectural sensitivity demonstrated in the presented workflow could increase the interest of architects in actively pursuing efficiency measures and producing designs that creatively use the saving potentials of smart arrangement of spaces.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This manuscript shows significant inconsistencies in predicted energy use intensity for the ASHRAE 90.1 Appendix G zoning paradigm when compared to the actual floor plan layout of a building. A significant energy optimization potential is revealed in the floor plan design process. The form-sensitive nature of the presented workflow could increase the interest of architects in energy modeling in general.</p>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<p>The authors would like to thank Transsolar Energietechnik GmbH Munich and the Alexander S. Onassis Public Benefit Foundation for productive discussions and partial funding of this research project.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>
+    <p>AIA (2012). The AIA Energy Modeling Practice Guide. Retrieved March 2015. <a href="https://www.aia.org/resources/8056-architects-guide-to-integrating-energy-modeli">https://www.aia.org/resources/8056-architects-guide-to-integrating-energy-modeli</a></p>
+  </li>
+  <li>
+    <p>ANSI/ASHRAE/IESNA Standard 90.1-2013 Appendix G</p>
+  </li>
+  <li>
+    <p>de Wilde, P., Augenbroe, G., &amp; van der Voorden, M. (2002). Design Analysis Integration: Supporting the Selection of Energy Saving Building Components. Building and environment 37 (8–9): 807–816.</p>
+  </li>
+  <li>
+    <p>DOE (2012). EnergyPlus Energy Simulation Software, V.7, <a href="https://energyplus.net">https://energyplus.net</a></p>
+  </li>
+  <li>
+    <p>Dogan, T., Reinhart, C.F., &amp; Michalatos, P. (2012). Urban daylight simulation calculating the daylit area of urban designs. Proceedings of SimBuild.</p>
+  </li>
+  <li>
+    <p>Dogan, T. (2013). Archsim Energy Modeling Software. Retrieved November 2013. <a href="http://www.archsim.com">http://www.archsim.com</a></p>
+  </li>
+  <li>
+    <p>Dogan, T., Reinhart, C.F., &amp; Michalatos, P. (2015). Autozoner: an algorithm for automatic thermal zoning of buildings with unknown interior space definitions. Journal of Building Performance Simulation, (ahead-of-print): 1-14.</p>
+  </li>
+  <li>
+    <p>Ebner, P. (2010). Typology+ Innovative Residential Architecture. Birkhäuser GmbH.</p>
+  </li>
+  <li>
+    <p>Jocher, T., Loch, S., Lederer, A., Pampe, B., Gasser, M., zur Brügge, C., Tvrtkovic, M., Stamm-Teske, W., Fischer, K., &amp; Haag, T. (2010). Raumpilot. Wüstenrot Stiftung</p>
+  </li>
+  <li>
+    <p>Klein, S.A. (1979). TRNSYS, a transient system simulation program. Solar Energy Laboratory, University of Wisconsin—Madison.</p>
+  </li>
+  <li>
+    <p>Lagios, K., Niemasz, J., &amp; Reinhart, C.F. (2010). Animated building performance simulation (abps)-linking rhinoceros/grasshopper with radiance/daysim. Proceedings of SimBuild.</p>
+  </li>
+  <li>
+    <p>Merkblatt, S.I.A. (2006). 2024: Standard-Nutzungsbedingungen für die Energie-und Gebäudetechnik. Zürich: Swiss Society of Engineers and Architects.</p>
+  </li>
+  <li>
+    <p>McNeel, R. (2012). Grasshopper - Generative Modeling with Rhino, McNeel North America, Seattle, USA. <a href="http://www.grasshopper3d.com">http://www.grasshopper3d.com</a></p>
+  </li>
+  <li>
+    <p>McNeel, R. (2012). Rhinoceros - NURBS Modeling for Windows (version 5.0), McNeel North America, Seattle, WA, USA. <a href="http://www.rhino3d.com">http://www.rhino3d.com</a></p>
+  </li>
+  <li>
+    <p>Morbitzer, C., Strachan, P.A., Webster, J., Spires, B., &amp; Cafferty, D. (2001). Integration of building simulation into the design process of an architectural practice. Proceedings of Building Simulation 2007: 7th Conference of the International Building Performance Association.</p>
+  </li>
+  <li>
+    <p>Neufert, E., Neufert, P., &amp; Kister, J. (2012). Architects’ data. John Wiley &amp; Sons.</p>
+  </li>
+  <li>
+    <p>Pratt, K.B., Jones, N.L., Schumann, L., Bosworth, D.E., &amp; Heumann, A.D. (2012). Automated translation of architectural models for energy simulation. Proceedings of SimAUD 2012: Symposium on Simulation for Architecture and Urban Design.</p>
+  </li>
+  <li>
+    <p>Reinhart, C.F., Dogan, T., Jakubiec, J.A., Rakha, T., &amp; Sang, A. (2013). Umi-an urban simulation environment for building energy use, daylighting and walkability. Proceedings of Building Simulation 2013: 13th Conference of International Building Performance Simulation Association.</p>
+  </li>
+  <li>
+    <p>Roudsari, M.S., Pak, M., &amp; Smith, A. (2013). Ladybug: A Parametric Environmental Plugin for Grasshopper to Help Designers Create an Environmentally-Conscious Design. Proceedings of Building Simulation 2013: 13th Conference of the International Building Performance Association.</p>
+  </li>
+  <li>
+    <p>Schneider, F. (2011). Floor Plan Manual: Housing. Walter de Gruyter.</p>
+  </li>
+  <li>
+    <p>Smith, L., Bernhardt, K., &amp; Jezyk, M. (2011). Automated energy model creation for conceptual design. Proceedings of SimAUD 2011: Symposium on Simulation for Architecture and Urban Design.</p>
+  </li>
+  <li>
+    <p>Treeck, C.V., &amp; Rank, E. (2006). Dimensional reduction of 3D building models using graph theory and its application in building energy simulation. Engineering with Computers An International Journal for Simulation-Based Engineering, 23 (2): 109–122.</p>
+  </li>
+  <li>
+    <p>US Green Building Council (2014). LEED rating systems. Retrieved November 2014. <a href="http://www.usgbc.org/leed#rating">http://www.usgbc.org/leed#rating</a></p>
+  </li>
+</ul>
+
+    </main>
+    <footer>
+  © Manos Saratsis • <a href="https://linkedin.com/in/esaratsis">LinkedIn</a> • <a href="https://github.com/manossaratsis">GitHub</a> • <a href="https://twitter.com/sarstis">Twitter</a>
+</footer>
+
+    <script type="text/javascript" src="../../js/navbar.js"></script>
+<script type="text/javascript" src="../../js/analytics.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "Manos Saratsis",
+  "url": "https://manossaratsis.com",
+  "sameAs": [
+    "https://twitter.com/sarstis",
+    "https://www.linkedin.com/in/esaratsis/",
+    "https://www.instagram.com/sarstis/",
+    "https://github.com/manossaratsis"
+  ]
+}
+</script>
+
+  </body>
+</html>

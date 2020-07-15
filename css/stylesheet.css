@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:300,300i,400");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300, 300i, 400");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%; }
+
+html,
+body {
+  overflow-x: hidden; }
+
+body {
+  background: #ddd;
+  color: #1e1e1e;
+  font-weight: 300;
+  font-family: "Rubik", sans-serif; }
+  body main {
+    font-size: 18px;
+    left: calc((100vw - 42em) / 2);
+    line-height: 1.9em;
+    margin-bottom: 3em;
+    margin-top: 5em;
+    min-height: calc(100vh - (3em + 5em) - (2 * 3em + 0.8em));
+    position: relative;
+    width: 42em; }
+    body main ul:not(#markdown-toc) {
+      list-style-type: square;
+      margin: 1.2em; }
+  body footer {
+    color: #777777;
+    font-size: 0.8em;
+    font-weight: 400;
+    padding: 3em 0;
+    position: relative;
+    text-align: center; }
+    body footer a:link,
+    body footer a:visited,
+    body footer a:hover,
+    body footer a:active {
+      color: #777777;
+      text-decoration: underline; }
+  body.home {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; }
+  body a {
+    text-decoration: none; }
+    body a:link, body a:visited {
+      color: #1e00ee; }
+    body a:link:hover, body a:visited:hover {
+      cursor: pointer;
+      text-decoration: underline; }
+  body aside {
+    color: #1e00ee;
+    font-size: 0.8em;
+    margin-top: 2em;
+    text-transform: lowercase; }
+  body blockquote {
+    border-left: 4px solid rgba(235, 235, 235, 0.9);
+    color: #999999;
+    font-size: 2em;
+    line-height: 1.3em;
+    padding-left: 1em; }
+    body blockquote p {
+      margin-top: 1em; }
+  body em.caption {
+    color: #777777;
+    line-height: 1.5em; }
+  body h1 {
+    color: #ffffff;
+    font-size: 2.9em;
+    font-weight: 300;
+    line-height: 1.2em;
+    text-shadow: 3px 3px 10px rgba(20, 20, 20, 0.1); }
+  body h2 {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-top: -2em;
+    padding-top: 4em; }
+  body h3 {
+    font-size: 1em;
+    font-weight: 400;
+    margin-top: -2em;
+    padding-top: 4em; }
+  body hr {
+    border: 2px #ffffff solid;
+    margin-bottom: 2em;
+    margin-top: 4em;
+    box-shadow: 3px 3px 10px rgba(20, 20, 20, 0.1); }
+  body img.figure {
+    border-radius: 4px;
+    box-shadow: 3px 3px 10px rgba(20, 20, 20, 0.2);
+    margin-top: 1.75em;
+    max-width: 100%; }
+  body img.profile-pic {
+    border-radius: 50%;
+    box-shadow: 3px 3px 10px rgba(20, 20, 20, 0.2);
+    height: 12em; }
+  body p {
+    font-weight: 300;
+    margin-top: 1.75em; }
+  body strong {
+    font-weight: 400; }
+  body table {
+    border-collapse: collapse;
+    margin-top: 1em;
+    table-layout: fixed;
+    width: 100%; }
+    body table td,
+    body table th {
+      padding-left: 0.5em; }
+    body table tr {
+      height: 2.5em; }
+    body table tbody tr:nth-child(odd) {
+      background-color: #eeeeee; }
+  body ul.nav-menu {
+    background-color: rgba(235, 235, 235, 0.9);
+    box-shadow: 3px 3px 10px rgba(20, 20, 20, 0.1);
+    -webkit-box-shadow: 3px 3px 10px rgba(20, 20, 20, 0.1);
+    height: 3em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1; }
+    body ul.nav-menu li {
+      float: left; }
+      body ul.nav-menu li a {
+        color: #1e00ee;
+        display: inline-block;
+        font-weight: 400;
+        font-size: 0.8em;
+        letter-spacing: 0.1em;
+        padding: 1.3em;
+        text-transform: uppercase; }
+        body ul.nav-menu li a.logo {
+          background-color: #1e00ee;
+          color: #ffffff; }
+        body ul.nav-menu li a.currentLink {
+          background-color: #ffffff; }
+        body ul.nav-menu li a:not(.logo):not(.currentLink):hover {
+          background-color: #f4f4f4; }
+      body ul.nav-menu li.icon {
+        display: none; }
+  body .nav-button {
+    display: none;
+    outline: none; }
+  body .card {
+    background-color: rgba(235, 235, 235, 0.8);
+    border-radius: 4px;
+    border-left: 3px solid #1e00ee;
+    box-shadow: 3px 3px 10px rgba(20, 20, 20, 0.1);
+    line-height: 2em;
+    margin-top: 1.2em;
+    padding: 1em 2em; }
+    body .card > * {
+      margin: 0;
+      padding: 0; }
+  body .banner {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 10px rgba(20, 20, 20, 0.3);
+    height: 60vh;
+    width: 100vw; }
+  body .description {
+    color: #999999;
+    font-weight: 300; }
+  body .post article {
+    font-family: "Roboto Slab", serif; }
+  body ul.sidebar {
+    left: 0;
+    list-style-type: none;
+    position: fixed;
+    text-align: right;
+    top: 5em;
+    width: calc(((100vw - 42em) / 2) - 2em); }
+    body ul.sidebar a:link,
+    body ul.sidebar a:visited {
+      color: #777777; }
+    body ul.sidebar a:hover,
+    body ul.sidebar a:visited:hover {
+      color: #1e00ee; }
+    body ul.sidebar li {
+      font-size: 0.94em;
+      line-height: 2em; }
+  body .sub {
+    font-size: 60%;
+    margin-left: 0.1em;
+    position: relative;
+    top: 0.3em; }
+  body .sup {
+    bottom: 0.8em;
+    font-size: 60%;
+    margin-left: 0.1em;
+    position: relative; }
+
+@media (max-width: 1360px) {
+  body main ul.sidebar {
+    margin-bottom: 1.2em;
+    position: static;
+    width: 100vw; }
+    body main ul.sidebar li a {
+      display: block;
+      text-align: left; } }
+@media (max-width: 1024px) {
+  body.home {
+    height: auto;
+    min-height: 100vh; }
+  body main {
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+    position: static;
+    width: 92vw; }
+  body ul.nav-menu,
+  body ul.nav-menu.responsive {
+    height: initial;
+    position: fixed; }
+  body ul.nav-menu li:not(:first-child) {
+    display: none; }
+  body ul.nav-menu.responsive li {
+    display: inline;
+    float: none; }
+    body ul.nav-menu.responsive li a {
+      display: block;
+      margin-right: 0;
+      text-align: left; }
+  body .banner-image {
+    max-height: 30em; }
+  body .card {
+    padding: 1em 1.2em; }
+  body .nav-button {
+    cursor: pointer;
+    display: block;
+    height: 1.8em;
+    position: fixed;
+    right: 1em;
+    top: 0.6em;
+    z-index: 1000; } }
