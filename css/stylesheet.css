@@ -27,7 +27,7 @@ body {
       list-style-type: square;
       margin: 1.2em; }
   body footer {
-    color: #777777;
+    color: #1e00ee;
     font-size: 0.8em;
     font-weight: 400;
     padding: 3em 0;
@@ -37,7 +37,7 @@ body {
     body footer a:visited,
     body footer a:hover,
     body footer a:active {
-      color: #777777;
+      color: #1e00ee;
       text-decoration: underline; }
   body.home {
     background-position: center center;
