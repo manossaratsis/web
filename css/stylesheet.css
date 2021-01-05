@@ -148,7 +148,7 @@ body {
     display: none;
     outline: none; }
   body .card {
-    background-color: rgba(235, 235, 235, 0.8);
+    background-color: rgba(235, 235, 235, 0.7);
     border-radius: 4px;
     border-left: 3px solid #1e00ee;
     box-shadow: 3px 3px 10px rgba(20, 20, 20, 0.1);
