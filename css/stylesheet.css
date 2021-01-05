@@ -29,6 +29,7 @@ body {
   body footer {
     color: #1e00ee;
     font-size: 0.8em;
+    font-weight: 400;
     padding: 3em 0;
     position: relative;
     text-align: center; }
